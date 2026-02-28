@@ -54,6 +54,26 @@ Todos os componentes abaixo estão presentes no kit:
 
 ---
 
+# 🔄 Teste de Comunicação (Loopback)
+
+Antes de montar o robô, é importante verificar se a comunicação entre o seu computador e a placa Arduino está funcionando corretamente.
+
+### Passo a passo do teste:
+
+1. Conecte o Arduino ao computador via cabo USB.
+
+2. Para que o teste de loopback funcione, conecte também **os pinos TX e RX do Arduino entre si** (TX no pino RX e RX no pino TX), além de garantir que o Arduino esteja alimentado corretamente (5V e GND).
+
+3. Abra a Arduino IDE e, em seguida, o **Monitor Serial** (ícone de lupa no canto superior direito da IDE ou no menu `Ferramentas > Monitor Serial`).
+
+4. No campo de texto do Monitor Serial (parte superior), digite uma mensagem qualquer e envie.
+
+5. Se a comunicação estiver funcionando, você deverá ver a mesma mensagem aparecer logo abaixo no Monitor Serial, indicando que o Arduino está recebendo e enviando dados corretamente.
+
+![TesteLoopBack](Imagens/TesteLoopback.png)
+
+---
+
 # 🔧 Montagem do Projeto
 
 ## 📷 Montagem Original
