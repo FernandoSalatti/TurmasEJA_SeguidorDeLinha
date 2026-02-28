@@ -60,7 +60,7 @@ Todos os componentes abaixo estão presentes no kit:
 
 A montagem sugerida no material do kit utiliza praticamente todos os componentes listados acima.
 
-![EsquematicoEletrogate](Esquematico_Eletrogate.png)
+![EsquematicoEletrogate](Imagens/Esquematico_Eletrogate.png)
 
 ---
 
@@ -102,7 +102,7 @@ Dessa forma:
 - Evitamos sobrecarga nos pinos
 - Deixamos o projeto mais organizado e profissional
 
-![EsquematicoTCC](Esquematico_TCC.png)
+![EsquematicoTCC](Imagens/Esquematico_TCC.png)
 
 ---
 
