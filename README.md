@@ -46,7 +46,7 @@ Todos os componentes abaixo estão presentes no kit:
 - Protoboard  
 - Jumpers macho-macho  
 - Jumpers macho-fêmea  
-- 2x Micro Servo 9g SG90  
+- 2x Motor Dc 3-6v  
 - Sensor de Distância Ultrassônico HC-SR04  
 - Kit Chassi 2 rodas  
 - 2x Módulo Seguidor de Linha TCRT5000  
