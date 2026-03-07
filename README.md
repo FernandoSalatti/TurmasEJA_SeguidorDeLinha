@@ -221,7 +221,7 @@ Siga esta ordem:
 ## 🔎 Seguidor de Linha
 
 Os sensores TCRT5000 detectam a linha no chão.
-
+Aprenda sobre o sensor aqui: https://www.youtube.com/watch?v=dAQYf4zdnks
 - Linha detectada → envia sinal ao Arduino  
 - Fora da linha → Arduino corrige a direção  
 
@@ -230,7 +230,7 @@ Os sensores TCRT5000 detectam a linha no chão.
 ## 📡 Sensor Ultrassônico
 
 O HC-SR04 mede a distância até um objeto à frente.
-
+Aprenda sobre o sensor aqui: https://www.youtube.com/watch?v=TX62dkfrb34
 Se a distância for menor que o valor definido no código:
 
 - O robô para
