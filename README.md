@@ -31,6 +31,8 @@ Neste projeto, além da função de seguir linha, vamos adicionar um **sensor de
 - Pare antes de bater
 - Fique mais inteligente e seguro
 
+Também adicionaremos **LEDs de indicação de status**, que mostram visualmente o estado do robô durante o funcionamento.
+
 ---
 
 # 🧰 Componentes Utilizados
@@ -46,11 +48,14 @@ Todos os componentes abaixo estão presentes no kit:
 - Protoboard  
 - Jumpers macho-macho  
 - Jumpers macho-fêmea  
-- 2x Motor Dc 3-6v  
+- 2x Motor DC 3–6V  
 - Sensor de Distância Ultrassônico HC-SR04  
 - Kit Chassi 2 rodas  
 - 2x Módulo Seguidor de Linha TCRT5000  
 - Ponte H Dupla L298N  
+- 1x LED Verde  
+- 1x LED Vermelho  
+- 2x Resistores de **330Ω**
 
 ---
 
@@ -126,6 +131,67 @@ Dessa forma:
 
 ---
 
+# 💡 Indicadores Visuais com LEDs
+
+Para tornar o comportamento do robô mais fácil de entender durante os testes, adicionamos **dois LEDs indicadores de status**.
+
+Esses LEDs mostram visualmente se o robô está funcionando normalmente ou se detectou um obstáculo.
+
+---
+
+## 🟢 LED Verde — Funcionamento Normal
+
+Quando o robô **não detecta obstáculos**, ele:
+
+- Continua seguindo a linha normalmente
+- Mantém o **LED verde aceso**
+
+Isso indica que o robô está operando normalmente.
+
+---
+
+## 🔴 LED Vermelho — Obstáculo Detectado
+
+Quando o **sensor ultrassônico detecta um objeto a menos de 15 cm**, o robô:
+
+- Para imediatamente
+- Acende o **LED vermelho**
+
+Isso indica que o robô interrompeu o movimento para **evitar colisão**.
+
+---
+
+# 🔌 Ligação dos LEDs
+
+Cada LED deve ser ligado com um **resistor de 330Ω** para limitar a corrente e evitar danos ao componente.
+
+### LED Verde
+
+Conexão:
+
+- **Pino 12 do Arduino → Resistor 330Ω → Perna longa do LED**
+- **Perna curta do LED → GND**
+
+---
+
+### LED Vermelho
+
+Conexão:
+
+- **Pino 13 do Arduino → Resistor 330Ω → Perna longa do LED**
+- **Perna curta do LED → GND**
+
+---
+
+### Resumo das conexões
+
+| LED | Pino Arduino | Função |
+|----|----|----|
+| 🟢 Verde | 12 | Robô em funcionamento |
+| 🔴 Vermelho | 13 | Obstáculo detectado |
+
+---
+
 # 📁 Estrutura do Repositório
 
 Este repositório contém:
@@ -159,13 +225,22 @@ Os sensores TCRT5000 detectam a linha no chão.
 - Linha detectada → envia sinal ao Arduino  
 - Fora da linha → Arduino corrige a direção  
 
+---
+
 ## 📡 Sensor Ultrassônico
 
 O HC-SR04 mede a distância até um objeto à frente.
 
 Se a distância for menor que o valor definido no código:
+
 - O robô para
+- O **LED vermelho acende**
 - Evita colisão
+
+Quando não há obstáculos:
+
+- O robô continua seguindo a linha
+- O **LED verde permanece aceso**
 
 ---
 
@@ -175,6 +250,7 @@ Ao final deste projeto, você terá:
 
 - ✔ Um robô seguidor de linha funcional  
 - ✔ Sistema de parada por obstáculo  
+- ✔ Indicadores visuais de status (LEDs)  
 - ✔ Conhecimento básico de:
   - Sensores
   - Controle de motores
