@@ -127,7 +127,7 @@ Dessa forma:
 - Evitamos sobrecarga nos pinos
 - Deixamos o projeto mais organizado e profissional
 
-![EsquematicoTCC](Imagens/TCC_Esquematico.png)
+![EsquematicoTCC](Imagens/ESQUEMATICO_TCC.png)
 
 ---
 
