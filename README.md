@@ -233,6 +233,7 @@ Aprenda sobre o sensor aqui: https://www.youtube.com/watch?v=dAQYf4zdnks
 O HC-SR04 mede a distância até um objeto à frente.
 
 Aprenda sobre o sensor aqui: https://www.youtube.com/watch?v=TX62dkfrb34
+
 Se a distância for menor que o valor definido no código:
 
 - O robô para
