@@ -57,6 +57,36 @@ Todos os componentes abaixo estão presentes no kit:
 - 1x LED Vermelho  
 - 2x Resistores de **330Ω**
 
+Explicação de cada material utilizado:
+
+A Arduino Uno R3 é responsável por realizar o controle principal do sistema. Nela é executado o programa que gerencia os sensores, os motores e os indicadores luminosos do robô. A placa recebe os sinais dos sensores, processa as informações e envia comandos para os atuadores, permitindo que o carrinho se movimente, siga a linha e pare ao detectar obstáculos. 
+
+O cabo USB é utilizado para estabelecer a comunicação entre o computador e a placa Arduino. Por meio dele é possível transferir o código desenvolvido no software de programação para a memória da placa, permitindo que o sistema embarcado execute as instruções definidas no projeto. 
+
+O adaptador de bateria de 9V e consequentemene a bateria de 9V é utilizado para alimentar exclusivamente a placa Arduino. Dessa forma, recebe uma fonte de energia dedicada, garantindo o funcionamento adequado do sistema de controle do robô. 
+
+As quatro pilhas AA através do seu respectivo suporte é responsável por fornecer alimentação para o módulo da ponte H Dupla L298N e, consequentemente, para os motores do carrinho. Essa separação da alimentação ajuda a evitar interferências no funcionamento da placa Arduino causadas pelo consumo dos motores. 
+
+A protoboard é utilizada como plataforma de montagem do circuito eletrônico. Nela são distribuídas as linhas de alimentação (VCC e GND), além das conexões do sensor ultrassônico, dos resistores e dos LEDs utilizados no sistema. 
+
+Os jumpers são utilizados para realizar conexões elétricas entre os diferentes pontos da protoboard e também entre módulos do circuito. Eles permitem a interligação rápida e organizada dos componentes. 
+
+Os motores DC são responsáveis por gerar o movimento do robô. Eles convertem energia elétrica em energia mecânica, fazendo com que as rodas do chassi girem e permitam o deslocamento do robô durante a execução do percurso.
+
+O Módulo Sensor de Distância Ultrassônico HC-SR04 é utilizado para detectar obstáculos à frente do carrinho. Ele funciona emitindo ondas ultrassônicas e medindo o tempo que o sinal leva para retornar após refletir em um objeto. Com base nessa informação, o Arduino consegue calcular a distância e interromper o movimento do robô quando um obstáculo é detectado.
+
+O kit chassi de duas rodas constitui a estrutura mecânica do carrinho. Ele fornece suporte para a fixação dos motores, das rodas, da placa Arduino, das baterias e dos demais componentes eletrônicos do projeto.
+
+O módulo seguidor de linha baseado no sensor TCRT5000 é utilizado parad etectar a linha no percurso. Ele funciona por meio de um sensor infravermelho que identifica diferenças de reflexão entre superfícies claras e escuras, permitindo que o robô reconheça a linha preta e se mantenha no trajeto definido.
+
+A ponte H dupla L298N é responsável por controlar os motores do carrinho. Ele permite que o Arduino controle o sentido de rotação e a velocidade dos motores, possibilitando movimentos como avançar, parar e realizar ajustes de direção durante o percurso.
+
+O LED verde é utilizado como indicador visual de funcionamento normal do carrinho. Ele permanece aceso quando o robô está se movimentando e não há obstáculos detectados pelo sensor ultrassônico.
+
+O LED vermelho funciona como um indicador de alerta. Ele é acionado quando o sensor ultrassônico detecta um objeto à frente do carrinho, indicando que o robô interrompeu seu movimento para evitar uma colisão.
+
+Os resistores de 330 Ω são utilizados em série com cada LED para limitar a corrente elétrica que passa pelos componentes. Essa limitação é necessária para evitar danos aos LEDs e garantir seu funcionamento adequado dentro dos limites de corrente recomendados.
+
 ---
 
 # 🔄 Teste de Comunicação (Loopback)
